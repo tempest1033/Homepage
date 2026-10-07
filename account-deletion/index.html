@@ -1,20 +1,26 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>트리비게임즈 | 계정 삭제 안내</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="legal-page">
   <header class="header">
-    <div class="header__inner">
-      <a class="header__brand" href="../" aria-label="홈으로 이동">
-        <img class="header__logo" src="../assets/ComLogo.png" alt="트리비게임즈">
+    <div class="container header__inner">
+      <a class="header__brand" href="../" aria-label="TRIBGAMES 홈">
+        <img class="header__logo" src="../assets/ComLogo.png" alt="TRIBGAMES" width="600" height="117">
       </a>
-      <div class="header__actions">
-        <div class="language-select" data-language-select>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../#games" data-i18n="nav.games">게임</a>
+        <a href="../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">        <div class="language-select" data-language-select>
           <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
             <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2"/>
@@ -36,70 +42,128 @@
     <article class="legal-container">
       <div data-lang-block="ko">
         <h1>계정 삭제 안내</h1>
-        <p>트리비게임즈 앱에서 계정 삭제를 진행하면 서버에 저장된 게임 진행도, 구매 이력, 수집된 사용자 데이터가 모두 삭제되며, 삭제가 완료된 후에는 복구가 불가능합니다.</p>
+        <p>「클래시 택티카」(개발사: 트리비게임즈) 계정을 삭제하면 서버에 저장된 계정 정보와 게임 데이터가 삭제됩니다. 삭제가 끝나면 복구할 수 없습니다.</p>
 
-        <h2>앱 내 삭제 경로</h2>
-        <p>앱 실행 → <strong>설정</strong> → <strong>계정 삭제</strong></p>
-
-        <h2>삭제 절차</h2>
+        <h2>앱에서 삭제하기</h2>
+        <p>앱 실행 → <strong>프로필</strong> → <strong>계정 삭제</strong></p>
         <ol>
-          <li>계정 삭제 화면에서 코드 요청 또는 표시된 확인 코드를 확인합니다.</li>
-          <li>코드를 입력한 뒤 안내 내용을 다시 한 번 확인합니다.</li>
-          <li><strong>확인</strong> 버튼을 누르면 서버에 계정 삭제 요청이 전송되고 처리되면 모든 데이터가 삭제됩니다.</li>
-          <li>처리가 완료되면 앱이 타이틀 화면으로 이동하며, 이후 앱을 다시 이용하려면 새 계정으로 시작하게 됩니다.</li>
+          <li><strong>계정 삭제</strong>를 누르면 삭제 코드가 표시됩니다.</li>
+          <li>표시된 코드를 입력란에 그대로 입력합니다.</li>
+          <li>안내 내용을 확인하고 <strong>삭제</strong>를 누르면 서버에 삭제가 요청됩니다.</li>
+          <li>처리가 끝나면 타이틀 화면으로 돌아갑니다.</li>
         </ol>
 
-        <h2>삭제 이후 안내</h2>
+        <h2>앱 없이 삭제 요청하기</h2>
+        <p>앱을 지웠거나 실행할 수 없다면 <a href="mailto:support@tribgames.com?subject=%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">support@tribgames.com</a>으로 제목을 “계정 삭제 요청”으로 하여 메일을 보내 주세요. 본문에는 아래 중 하나를 적어 주세요.</p>
         <ul>
-          <li>삭제된 계정은 복구할 수 없으며, 기존 결제 내역이나 게임 아이템도 복원되지 않습니다.</li>
-          <li>삭제 이후 앱을 다시 실행하면 새로운 익명 계정이 생성되며, 이전 데이터와 연결되지 않습니다.</li>
-          <li>계정 삭제는 법적 보관 의무가 있는 최소 정보(결제 내역 등)와 스토어 정책에서 요구하는 기간만큼 별도로 보관될 수 있습니다.</li>
+          <li>회원 번호(PID): 앱의 프로필 화면에서 복사할 수 있습니다.</li>
+          <li>계정에 연동한 Google·Apple·Facebook 계정의 이메일 주소</li>
+        </ul>
+        <p>본인 확인 후 계정을 삭제하고 처리 결과를 메일로 알려 드립니다.</p>
+
+        <h2>삭제되는 정보</h2>
+        <ul>
+          <li>회원 번호(PID), 닉네임, 연동한 계정 정보</li>
+          <li>게임 진행 데이터, 보유 재화와 아이템</li>
         </ul>
 
-        <h2>추가 지원</h2>
-        <p>계정 삭제가 정상적으로 진행되지 않거나 다른 문의가 있을 경우 <a href="mailto:support@tribgames.com">support@tribgames.com</a>으로 연락 주세요.</p>
+        <h2>보관되는 정보</h2>
+        <ul>
+          <li>결제 기록은 전자상거래법에 따라 5년간 보관한 뒤 파기합니다.</li>
+          <li>Google Play와 App Store의 구매 내역은 각 스토어가 관리하며, 이 삭제와 별개입니다.</li>
+        </ul>
+
+        <h2>삭제 후 안내</h2>
+        <ul>
+          <li>삭제한 계정과 보유 아이템은 복구되지 않으며, 이미 결제한 상품도 되돌릴 수 없습니다.</li>
+          <li>앱을 다시 실행하면 이전 데이터와 연결되지 않은 새 게스트 계정으로 시작합니다.</li>
+        </ul>
       </div>
 
       <div data-lang-block="en" hidden>
         <h1>Account Deletion Guide</h1>
-        <p>Deleting your account in the TRIB GAMES app permanently removes gameplay progress, purchase history, and stored user data from our servers. Once completed, the deletion cannot be undone.</p>
+        <p>Deleting your Clash Tactica account (developer: TRIBGAMES) removes your account information and game data from our servers. Once deletion is complete, it cannot be undone.</p>
 
-        <h2>In-App Path</h2>
-        <p>Open the app → <strong>Settings</strong> → <strong>Delete Account</strong></p>
-
-        <h2>How Deletion Works</h2>
+        <h2>Delete in the App</h2>
+        <p>Open the app → <strong>Profile</strong> → <strong>Delete Account</strong></p>
         <ol>
-          <li>On the deletion screen, request or review the verification code shown.</li>
-          <li>Enter the code and review the warnings once more.</li>
-          <li>Press <strong>Confirm</strong> to send the deletion request; once processed, all data is deleted.</li>
-          <li>When the cleanup finishes, the app returns to the title screen. Continuing the app will create a new account.</li>
+          <li>Tap <strong>Delete Account</strong> to display a deletion code.</li>
+          <li>Enter the code exactly as shown.</li>
+          <li>Review the notice and tap <strong>Delete</strong> to send the deletion request to our server.</li>
+          <li>When processing is complete, the app returns to the title screen.</li>
         </ol>
+
+        <h2>Request Deletion Without the App</h2>
+        <p>If you have removed the app or cannot run it, email <a href="mailto:support@tribgames.com?subject=Account%20Deletion%20Request">support@tribgames.com</a> with the subject “Account Deletion Request” and include one of the following.</p>
+        <ul>
+          <li>Your member ID (PID), which can be copied from the Profile screen in the app</li>
+          <li>The email address of the Google, Apple, or Facebook account linked to your game account</li>
+        </ul>
+        <p>After verifying your identity, we will delete the account and email you the result.</p>
+
+        <h2>Data That Is Deleted</h2>
+        <ul>
+          <li>Member ID (PID), nickname, and linked account information</li>
+          <li>Game progress data, currencies, and items</li>
+        </ul>
+
+        <h2>Data That Is Retained</h2>
+        <ul>
+          <li>Payment records are kept for 5 years as required by the Korean E-Commerce Act and then destroyed.</li>
+          <li>Purchase history on Google Play and the App Store is managed by each store and is not affected by this deletion.</li>
+        </ul>
 
         <h2>After Deletion</h2>
         <ul>
-          <li>Deleted accounts cannot be restored; previous purchases or items cannot be recovered.</li>
-          <li>Reopening the app creates a fresh anonymous account that is not linked to the deleted data.</li>
-          <li>Some information (e.g., billing records) may be retained separately for periods required by law and store policies.</li>
+          <li>Deleted accounts and items cannot be restored, and completed purchases cannot be reversed.</li>
+          <li>If you open the app again, you will start with a new guest account that is not linked to your previous data.</li>
         </ul>
-
-        <h2>Need Help?</h2>
-        <p>If the deletion flow fails or you have other questions, contact us at <a href="mailto:support@tribgames.com">support@tribgames.com</a>.</p>
       </div>
     </article>
   </main>
 
   <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__info">
-        <p data-i18n="footer.address">34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</p>
-        <p data-i18n="footer.email">support@tribgames.com</p>
-        <p data-i18n="footer.copyright">© 2025 TRIB GAMES All rights reserved.</p>
+    <div class="container">
+      <div class="footer__top">
+        <img src="../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="../games/">Clash Tactica</a></li>
+              <li><a href="../products/gamerscroll/">GamerScroll</a></li>
+              <li><a href="../products/unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../products/mixdog/">Mixdog</a></li>
+              <li><a href="../products/aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="footer__links">
-        <a href="../terms/" data-i18n="footer.link.terms">이용약관</a>
-        <a href="../privacy/" data-i18n="footer.link.privacy">개인정보처리정책</a>
-        <a href="../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a>
-      </nav>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
     </div>
   </footer>
   

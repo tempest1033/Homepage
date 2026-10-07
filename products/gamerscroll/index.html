@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="gs.docTitle">GamerScroll — 게임 순위와 시장 데이터 | 트리비게임즈</title>
+  <meta name="description" content="GamerScroll은 5개국 모바일 게임 매출·인기 순위와 스팀 동시 접속자 수·판매 순위를 매일 모아 보여주는 게임 시장 데이터 서비스입니다.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__brand" href="../../" aria-label="TRIBGAMES 홈">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="header__logo" width="600" height="117">
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../../#games" data-i18n="nav.games" aria-current="page">게임</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">
+        <div class="language-select" data-language-select>
+          <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <span class="language-select__current" data-language-current>한국어</span>
+          </button>
+          <ul class="language-select__menu" role="listbox" hidden>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="ko" aria-selected="true">한국어</button></li>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="en" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumb" aria-label="위치"><a href="../../#games" data-i18n="nav.games">게임</a><span aria-hidden="true">/</span><span>GamerScroll</span></nav>
+        <div class="page-hero__id">
+          <div><strong>GamerScroll</strong><span data-i18n="common.cat.gs">게임 시장 데이터</span></div>
+        </div>
+        <h1 class="h-display"><span data-i18n="gs.title1">게임 순위와 시장 흐름을</span><span data-i18n="gs.title2">매일 기록합니다.</span></h1>
+        <p class="lede" data-i18n="gs.lede">GamerScroll은 5개국 모바일 게임 매출·인기 순위와 스팀 동시 접속자 수·판매 순위를 매일 모아 보여주는 게임 시장 데이터 서비스입니다. 순위 변동과 신작, 급상승 게임을 한눈에 볼 수 있습니다.</p>
+        <div class="page-hero__actions">
+          <a href="https://gamerscroll.com" target="_blank" rel="noopener" class="btn btn--primary"><span data-i18n="gs.visit">GamerScroll 방문</span> <i aria-hidden="true">↗</i></a>
+        </div>
+        <p class="page-hero__note" data-i18n="gs.note">무료 · 웹 · 5개 언어</p>
+        <div class="showcase" data-reveal>
+          <img src="../../assets/img/gamerscroll-home.jpg" alt="GamerScroll 일간 게임 순위 화면" width="1600" height="1000">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="gs.featuresTitle">게임 시장을 숫자로 봅니다.</h2>
+          </div>
+        </div>
+        <div class="features" data-reveal>
+          <div class="feature"><h3 data-i18n="gs.f1.t">5개국 모바일 순위</h3><p data-i18n="gs.f1.d">한국·일본·미국·중국·대만의 구글플레이·앱스토어 매출과 인기 순위를 매일 갱신합니다.</p></div>
+          <div class="feature"><h3 data-i18n="gs.f2.t">스팀 순위</h3><p data-i18n="gs.f2.d">스팀 동시 접속자 수와 판매 순위를 모바일 순위와 함께 봅니다.</p></div>
+          <div class="feature"><h3 data-i18n="gs.f3.t">지금 뜨는 게임</h3><p data-i18n="gs.f3.d">급상승 게임, TOP 10 진입·이탈, 차트에 새로 오른 신작을 정리합니다.</p></div>
+          <div class="feature"><h3 data-i18n="gs.f4.t">게임별 순위 추이</h3><p data-i18n="gs.f4.d">게임마다 국가·스토어별 순위 변화를 그래프로 보여줍니다.</p></div>
+          <div class="feature"><h3 data-i18n="gs.f5.t">게임 DB</h3><p data-i18n="gs.f5.d">게임 이름과 개발사로 검색하고, 장르별로 찾아볼 수 있습니다.</p></div>
+          <div class="feature"><h3 data-i18n="gs.f6.t">빠짐없는 기록</h3><p data-i18n="gs.f6.d">2025년 12월부터 하루도 빠짐없이 쌓아 온 순위 기록을 바탕으로 합니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="split" data-reveal>
+          <div class="split__text">
+            <h2 class="h-section" data-i18n="gs.s1.title">지금 뜨는 게임을 먼저 봅니다.</h2>
+            <p data-i18n="gs.s1.desc">최근 7일 동안 순위가 가장 많이 오른 게임과 TOP 10에 새로 진입한 게임을 국가별로 보여줍니다.</p>
+          </div>
+          <div class="split__media">
+            <img src="../../assets/img/gamerscroll-trending.jpg" alt="GamerScroll 트렌딩 화면" width="1600" height="1000" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="common.infoTitle">한눈에 보기</h2>
+          </div>
+        </div>
+        <dl class="specs">
+          <div><dt data-i18n="common.type">분류</dt><dd data-i18n="common.cat.gs">게임 시장 데이터</dd></div>
+          <div><dt data-i18n="gs.countries">대상 국가</dt><dd data-i18n="gs.countriesV">한국, 일본, 미국, 중국, 대만</dd></div>
+          <div><dt data-i18n="gs.data">데이터</dt><dd data-i18n="gs.dataV">모바일 매출·인기 순위, 스팀 동시 접속자 수·판매 순위</dd></div>
+          <div><dt data-i18n="gs.update">갱신</dt><dd data-i18n="gs.updateV">매일</dd></div>
+          <div><dt data-i18n="common.website">웹사이트</dt><dd><a href="https://gamerscroll.com" target="_blank" rel="noopener">gamerscroll.com</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="label" data-i18n="common.more">다른 제품</p>
+          </div>
+        </div>
+        <div class="more">
+          <a href="../../games/"><span data-i18n="common.cat.game">모바일 게임</span><strong>Clash Tactica</strong></a>
+          <a href="../mixdog/"><span data-i18n="common.cat.mx">AI 코딩 에이전트</span><strong>Mixdog</strong></a>
+          <a href="../aiscroll/"><span data-i18n="common.cat.ai">AI 리뷰 미디어</span><strong>AIScroll</strong></a>
+          <a href="../unity-tools/"><span data-i18n="common.cat.ut">Unity 에디터 도구</span><strong>UniGit · UniCell</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="../../games/">Clash Tactica</a></li>
+              <li><a href="../gamerscroll/">GamerScroll</a></li>
+              <li><a href="../unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../mixdog/">Mixdog</a></li>
+              <li><a href="../aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="../../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/language.js"></script>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

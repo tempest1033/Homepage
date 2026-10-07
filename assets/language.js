@@ -1,4 +1,8 @@
-﻿(function () {
+/* Language switch (Korean / English).
+   Korean is the text written in the HTML; English comes from the dictionary
+   below. Every element with data-i18n="key" is swapped, and blocks marked
+   data-lang-block="ko|en" (legal pages) are shown for their language only. */
+(function () {
   try {
     const path = window.location.pathname;
     if (path.endsWith('/index.html')) {
@@ -11,135 +15,238 @@
   }
 
   const STORAGE_KEY = 'tribigames-language';
-  const translations = {
-    ko: {
-      'home.heroLine1': '나만의 전략으로 완성되는 덱빌딩 전략 게임',
-      'home.heroLine2': '클래시 택티카: 머지 배틀',
-      'footer.address': '34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128',
-      'footer.email': 'support@tribgames.com',
-      'footer.copyright': '2025 TRIB GAMES All rights reserved.',
-      'footer.link.terms': '이용약관',
-      'footer.link.privacy': '개인정보처리정책',
-      'footer.link.accountDeletion': '계정 삭제 안내',
-      'terms.title': '이용약관',
-      'terms.intro': '본 약관은 트리비게임즈 서비스를 이용하는 이용자(이하 “회원”)와 회사 간의 서비스 이용에 관한 권리, 의무 및 책임사항을 규정합니다.',
-      'terms.section1.title': '제1조 (목적)',
-      'terms.section1.body': '이 약관은 회사가 제공하는 서비스의 이용과 관련하여 회사와 회원 간의 기본적인 권리·의무 및 책임사항을 규정함을 목적으로 합니다.',
-      'terms.section2.title': '제2조 (약관의 효력 및 변경)',
-      'terms.section2.item1': '이 약관은 서비스를 이용하고자 하는 모든 회원에게 적용됩니다.',
-      'terms.section2.item2': '회사는 관련 법령을 위배하지 않는 범위에서 약관을 변경할 수 있으며, 변경 시 공지사항을 통해 사전 공지합니다.',
-      'terms.section3.title': '제3조 (서비스의 제공 및 변경)',
-      'terms.section3.item1': '회사는 게임 서비스 및 관련 콘텐츠를 회원에게 제공합니다.',
-      'terms.section3.item2': '회사는 서비스의 운영상, 기술상의 필요에 따라 제공하는 콘텐츠의 전부 또는 일부를 변경할 수 있습니다.',
-      'terms.section4.title': '제4조 (회원의 의무)',
-      'terms.section4.item1': '회원은 관련 법령, 약관 및 공지사항을 준수하여야 합니다.',
-      'terms.section4.item2': '회원은 타인의 정보를 도용하거나 부정 사용해서는 안 됩니다.',
-      'terms.section5.title': '제5조 (계약 해지 및 이용 제한)',
-      'terms.section5.body': '회사는 회원이 약관을 위반한 경우 사전 통지 후 서비스 이용을 제한하거나 계약을 해지할 수 있습니다.',
-      'terms.effectiveDate': '시행일: 2025년 9월 16일',
-      'privacy.title': '개인정보처리정책',
-      'privacy.intro': '회사는 회원의 개인정보를 중요하게 생각하며, 관련 법령과 지침을 준수하여 안전하게 관리합니다.',
-      'privacy.section1.title': '1. 수집하는 개인정보 항목 및 수집 방법',
-      'privacy.section1.item1': '가입 시: 이메일 주소, 닉네임, 비밀번호',
-      'privacy.section1.item2': '서비스 이용 과정에서 생성되는 게임 플레이 기록, 접속 로그, 결제 기록',
-      'privacy.section2.title': '2. 개인정보의 이용 목적',
-      'privacy.section2.item1': '서비스 제공 및 회원 관리',
-      'privacy.section2.item2': '고객 문의 대응 및 공지사항 전달',
-      'privacy.section2.item3': '서비스 품질 향상을 위한 통계 분석',
-      'privacy.section3.title': '3. 개인정보의 보유 및 이용 기간',
-      'privacy.section3.body': '회사는 이용 목적 달성 후 지체 없이 개인정보를 파기하며, 관련 법령에서 정한 기간 동안은 해당 법령을 따릅니다.',
-      'privacy.section4.title': '4. 개인정보의 제3자 제공',
-      'privacy.section4.body': '회사는 이용자의 동의가 있거나 법령에 의해 요구되는 경우를 제외하고 개인정보를 제3자에게 제공하지 않습니다.',
-      'privacy.section5.title': '5. 이용자의 권리 및 행사 방법',
-      'privacy.section5.body': '회원은 언제든지 자신의 개인정보를 열람, 정정, 삭제를 요청할 수 있으며, 회사는 지체 없이 조치합니다.',
-      'privacy.effectiveDate': '시행일: 2025년 9월 16일'
-    },
-    en: {
-      'home.heroLine1': 'A deck-building strategy game shaped by your tactics',
-      'home.heroLine2': 'Clash Tactica: Merge Battle',
-      'footer.address': '34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128',
-      'footer.email': 'support@tribgames.com',
-      'footer.copyright': '2025 TRIB GAMES All rights reserved.',
-      'footer.link.terms': 'Terms of Service',
-      'footer.link.privacy': 'Privacy Policy',
-      'footer.link.accountDeletion': 'Account Deletion Guide',
-      'terms.title': 'Terms of Service',
-      'terms.intro': 'These terms define the rights, obligations, and responsibilities between Tribigames and the users (“Members”) who use its services.',
-      'terms.section1.title': 'Article 1 (Purpose)',
-      'terms.section1.body': 'These terms aim to set forth the fundamental rights, obligations, and responsibilities between the Company and Members regarding the use of the services provided by the Company.',
-      'terms.section2.title': 'Article 2 (Effectiveness and Amendments of the Terms)',
-      'terms.section2.item1': 'These terms apply to every Member who wishes to use the services.',
-      'terms.section2.item2': 'The Company may amend the terms within the scope permitted by applicable laws and will announce such changes in advance through notices.',
-      'terms.section3.title': 'Article 3 (Provision and Changes of Services)',
-      'terms.section3.item1': 'The Company provides game services and related content to Members.',
-      'terms.section3.item2': 'The Company may change all or part of the content provided due to operational or technical needs.',
-      'terms.section4.title': 'Article 4 (Obligations of Members)',
-      'terms.section4.item1': 'Members must comply with relevant laws, these terms, and posted notices.',
-      'terms.section4.item2': 'Members must not steal or misuse another person’s information.',
-      'terms.section5.title': 'Article 5 (Termination and Use Restrictions)',
-      'terms.section5.body': 'If a Member violates these terms, the Company may restrict service use or terminate the contract after prior notice.',
-      'terms.effectiveDate': 'Effective Date: September 16, 2025',
-      'privacy.title': 'Privacy Policy',
-      'privacy.intro': 'The Company values Members’ personal information and manages it safely in accordance with applicable laws and guidelines.',
-      'privacy.section1.title': '1. Personal Information Collected and Collection Methods',
-      'privacy.section1.item1': 'During sign-up: email address, nickname, password',
-      'privacy.section1.item2': 'During service use: gameplay records, access logs, payment history',
-      'privacy.section2.title': '2. Purpose of Using Personal Information',
-      'privacy.section2.item1': 'Service provision and Member management',
-      'privacy.section2.item2': 'Responding to customer inquiries and delivering notices',
-      'privacy.section2.item3': 'Statistical analysis to improve service quality',
-      'privacy.section3.title': '3. Retention and Use Period of Personal Information',
-      'privacy.section3.body': 'The Company destroys personal information without delay once the purpose of use is achieved, and retains it only for periods required by applicable laws.',
-      'privacy.section4.title': '4. Provision of Personal Information to Third Parties',
-      'privacy.section4.body': 'The Company does not provide personal information to third parties unless consent is obtained or it is required by law.',
-      'privacy.section5.title': '5. Rights of Users and Exercise Methods',
-      'privacy.section5.body': 'Members may request to view, correct, or delete their personal information at any time, and the Company will promptly take necessary actions.',
-      'privacy.effectiveDate': 'Effective Date: September 16, 2025'
-    }
+  const LANGS = ['ko', 'en'];
+  const en = {
+    'nav.games': 'Games',
+    'nav.ai': 'AI',
+    'nav.company': 'About',
+    'nav.history': 'History',
+    'nav.contact': 'Contact',
+    'footer.company': 'Company',
+    'footer.policy': 'Policies',
+    'footer.link.terms': 'Terms of Service',
+    'footer.link.privacy': 'Privacy Policy',
+    'footer.link.accountDeletion': 'Account Deletion',
+
+    'common.features': 'Features',
+    'common.info': 'Product details',
+    'common.infoTitle': 'At a glance',
+    'common.type': 'Category',
+    'common.price': 'Price',
+    'common.platform': 'Platform',
+    'common.license': 'License',
+    'common.links': 'Links',
+    'common.website': 'Website',
+    'common.more': 'More products',
+    'common.cat.game': 'Mobile game',
+    'common.cat.mx': 'AI coding agent',
+    'common.cat.gs': 'Game market data',
+    'common.cat.ai': 'AI review media',
+    'common.cat.ut': 'Unity editor tools',
+
+    'home.docTitle': 'TRIBGAMES — A studio making games and AI',
+    'home.title1': 'Across games and AI,',
+    'home.title2': 'opening new possibilities.',
+    'home.lede': 'TRIBGAMES is an independent studio that develops and operates games and AI tools.',
+    'home.pillar.games': 'We make a mobile game, a game market data service, and Unity development tools.',
+    'home.pillar.ai': 'We make an AI coding agent and an AI review media outlet.',
+    'home.games.title': 'We make games, and provide the tools and data behind them.',
+    'home.ai.title': 'We build AI agents, and share a wide range of insights on AI.',
+    'home.ct.cat': 'Mobile game · Coming soon',
+    'product.ct.name': 'Clash Tactica',
+    'home.ct.desc': 'A casual defense game where you hold off incoming enemies with all kinds of combinations. Coming soon to Android and iOS.',
+    'home.mx.cat': 'AI coding agent · Free and open source',
+    'home.mx.desc': 'A desktop coding agent that delivers the same performance while using 63% fewer tokens.',
+    'home.gs.cat': 'Game market data',
+    'home.gs.desc': 'Daily mobile game revenue rankings across five countries, plus Steam concurrent player counts, tracked and analyzed.',
+    'home.ai.cat': 'AI review media',
+    'home.ai.desc': 'Hands-on reviews and measured analysis of AI models and coding tools.',
+    'home.ut.cat': 'Unity editor tools',
+    'home.ut.desc': 'A Git client and a spreadsheet-style data table editor that live inside Unity.',
+    'home.companyTitle': 'We ship what we first built for ourselves.',
+    'home.companyLede': 'TRIBGAMES is a small development studio in Yongin, Korea. Building our game, we made our own tools, and that work led to an AI coding agent. Today we build and run products in both games and AI.',
+    'home.area1.desc': 'We develop a mobile defense game in Unity, and build game market data and development tools.',
+    'home.area2.desc': 'We build an AI coding agent and publish reviews of AI models and tools.',
+    'home.fact.name': 'Company',
+    'home.fact.nameV': 'TRIBGAMES',
+    'home.fact.location': 'Location',
+    'home.fact.locationV': 'Suji-gu, Yongin, Korea',
+    'home.fact.field': 'Business',
+    'home.fact.fieldV': 'Games · AI software',
+    'home.fact.contact': 'Contact',
+    'home.historyTitle': 'History',
+    'home.h.soon': 'Coming soon',
+    'home.h.ct': 'Clash Tactica launches on Android and iOS',
+    'home.h.ai2': 'AIScroll redesigned around reviews, analysis, and dev logs',
+    'home.h.gs3': 'GamerScroll launches in five languages with a full redesign',
+    'home.h.mx2': 'Mixdog 1.0 released',
+    'home.h.mx1': 'First public release of Mixdog',
+
+    'mx.docTitle': 'Mixdog — The open-source coding agent that uses 63% fewer tokens | TRIBGAMES',
+    'mx.cat': 'AI coding agent',
+    'mx.title1': 'Same performance,',
+    'mx.title2': '63% fewer tokens.',
+    'mx.lede': 'Mixdog is a free, open-source desktop coding agent. No extra billing: connect your existing Claude, ChatGPT, or Grok subscription and start working immediately.',
+    'mx.dlWin': 'Download for Windows',
+    'mx.dlMac': 'Download for macOS',
+    'mx.note': 'Free · Apache-2.0 · Windows x64 and Apple Silicon Mac',
+    'mx.featuresTitle': 'From code to documents, in one window.',
+    'mx.f1.t': 'Same score, fewer tokens',
+    'mx.f1.d': 'On the 89 Terminal-Bench 2.1 tasks with the same model, Mixdog achieved an 86.5% success rate (Codex CLI: 86.1%) while using 63% fewer tokens overall.',
+    'mx.f2.t': 'Many models, one team',
+    'mx.f2.d': 'A strong model plans while several cheaper models search, edit, and review in parallel.',
+    'mx.f3.t': 'Editor, terminal, and Git together',
+    'mx.f3.d': 'Edit code, run tests, commit, and open pull requests without leaving the app.',
+    'mx.f4.t': 'Pick up on your phone',
+    'mx.f4.d': 'End-to-end encrypted remote control lets you check and steer work from anywhere.',
+    'mx.f5.t': 'Beyond code',
+    'mx.f5.d': 'Drives browsers and desktop apps, and creates and edits Word, Excel, PowerPoint, and PDF documents.',
+    'mx.f6.t': 'Local models on your GPU',
+    'mx.f6.d': 'Download a model inside the app and run it on your own PC.',
+    'mx.s1.label': 'Parallel work',
+    'mx.s1.title': 'Several tasks at once.',
+    'mx.s1.desc': 'Split the window and assign different tasks to independent sessions. Build a feature on one side while fixing a bug on the other.',
+    'mx.s2.label': 'Usage',
+    'mx.s2.title': 'See where every token went.',
+    'mx.s2.desc': 'Token usage, cost, subscription limits, and reset times by provider and model, on one screen.',
+    'mx.priceV': 'Free (model usage is billed by each provider’s subscription or API key)',
+    'mx.platformV': 'Windows x64, Apple Silicon Mac, command line (Node.js)',
+    'mx.models': 'Models',
+    'mx.modelsV': 'Claude, ChatGPT/Codex, Gemini, Grok, OpenRouter, DeepSeek, local models',
+    'mx.introPage': 'Product page',
+
+    'gs.docTitle': 'GamerScroll — Game rankings and market data | TRIBGAMES',
+    'gs.title1': 'Game rankings and market trends,',
+    'gs.title2': 'recorded every day.',
+    'gs.lede': 'GamerScroll gathers mobile game revenue and download rankings from five countries, alongside Steam concurrent player and sales rankings, every day. See rank changes, new releases, and fast risers at a glance.',
+    'gs.visit': 'Visit GamerScroll',
+    'gs.note': 'Free · Web · 5 languages',
+    'gs.featuresTitle': 'The game market, in numbers.',
+    'gs.f1.t': 'Mobile rankings in five countries',
+    'gs.f1.d': 'Google Play and App Store revenue and download rankings for Korea, Japan, the US, China, and Taiwan, updated daily.',
+    'gs.f2.t': 'Steam rankings',
+    'gs.f2.d': 'Steam concurrent players and top sellers alongside the mobile charts.',
+    'gs.f3.t': 'Trending now',
+    'gs.f3.d': 'Fast risers, TOP 10 entries and exits, and new games entering the charts.',
+    'gs.f4.t': 'Rank history per game',
+    'gs.f4.d': 'Each game’s ranking over time, by country and store, as a chart.',
+    'gs.f5.t': 'Game database',
+    'gs.f5.d': 'Search by game or developer name, or browse by genre.',
+    'gs.f6.t': 'No gaps',
+    'gs.f6.d': 'Built on daily ranking records kept without a missing day since December 2025.',
+    'gs.s1.label': 'Trending',
+    'gs.s1.title': 'Spot the games on the rise first.',
+    'gs.s1.desc': 'See the biggest climbers of the last seven days and the newcomers to the TOP 10, country by country.',
+    'gs.countries': 'Countries',
+    'gs.countriesV': 'Korea, Japan, US, China, Taiwan',
+    'gs.data': 'Data',
+    'gs.dataV': 'Mobile revenue and download rankings, Steam concurrent players and sales',
+    'gs.update': 'Updates',
+    'gs.updateV': 'Daily',
+
+    'ai.docTitle': 'AIScroll — Reviews of AI models and tools | TRIBGAMES',
+    'ai.title1': 'We test AI models and tools',
+    'ai.title2': 'and write about them.',
+    'ai.lede': 'AIScroll publishes reviews and analysis based on actually using and measuring AI models and coding agents, covering what matters when you choose: pricing, limits, and performance.',
+    'ai.visit': 'Visit AIScroll',
+    'ai.note': 'Free · Reviews · Analysis · Dev logs · News',
+    'ai.coverLabel': 'What we cover',
+    'ai.coverTitle': 'Use it, measure it, write it down.',
+    'ai.f1.t': 'Reviews',
+    'ai.f1.d': 'We put models and coding tools to work on real tasks and explain who they suit.',
+    'ai.f2.t': 'Analysis',
+    'ai.f2.d': 'We measure token costs, pricing, and limits ourselves and compare the numbers.',
+    'ai.f3.t': 'Dev logs',
+    'ai.f3.d': 'We record the problems and decisions behind building the coding agent Mixdog.',
+    'ai.recentLabel': 'Recent articles',
+    'ai.a1.t': 'AI token cost by language: non-English averages 1.54×, measured across 8 model tokenizers',
+    'ai.a1.d': 'We fed the same sentences in nine languages to eight models and measured the token cost.',
+    'ai.a2.t': 'Model pick — Muse Spark 1.3, the best value for money',
+    'ai.a2.d': 'Strengths, weaknesses, and pricing terms as an implementation worker model.',
+    'ai.a3.t': 'Three coding agent tools for September 2026: Paseo, Orca, and DeepSeek Harness',
+    'ai.a3.d': 'Remote access, isolated parallel work, and plugin extensibility compared.',
+    'ai.sections': 'Sections',
+    'ai.sectionsV': 'Reviews, analysis, dev logs, news',
+
+    'ut.docTitle': 'UniGit · UniCell — Unity editor tools | TRIBGAMES',
+    'ut.title1': 'Git and data editing,',
+    'ut.title2': 'done inside Unity.',
+    'ut.lede': 'Unity editor extensions we built and use while developing Clash Tactica. Version control and game data editing, without leaving the editor.',
+    'ut.contact': 'Contact us',
+    'ut.cell.label': 'Data table editor',
+    'ut.cell.desc': 'Edit CSV, TSV, and ScriptableObject tables like a spreadsheet. Modify hundreds of rows of balance data right inside a single Unity window.',
+    'ut.cell.1': 'Cell selection, copy and paste, insert and delete rows and columns',
+    'ut.cell.2': 'Sorting and text filters',
+    'ut.cell.3': 'Column rules, ID formulas, balance factor cards',
+    'ut.cell.4': 'ScriptableObject tables you can load at runtime',
+    'ut.git.label': 'Git client for Unity',
+    'ut.git.desc': 'A Git client built into the Unity Editor. From commits to GitHub, no terminal needed.',
+    'ut.git.f1.t': 'Everyday Git',
+    'ut.git.f1.d': 'Stage, commit, push, pull, fetch, branch, stash, cherry-pick, and reset with buttons.',
+    'ut.git.f2.t': 'Cell-level CSV diff',
+    'ut.git.f2.d': 'Game data CSVs are compared side by side, cell by cell.',
+    'ut.git.f3.t': 'Commit history',
+    'ut.git.f3.d': 'Browse authors, dates, messages, and changed files, per-file history, and ahead/behind counts.',
+    'ut.git.f4.t': 'Project window integration',
+    'ut.git.f4.d': 'Status dots on files and folders, and right-click to commit, revert, or view history.',
+    'ut.git.f5.t': 'GitHub integration',
+    'ut.git.f5.d': 'Sign in to GitHub from the editor and create or clone repositories.',
+    'ut.git.f6.t': 'Setup wizard',
+    'ut.git.f6.d': 'Four guided steps — Git detection, identity, GitHub, project — plus a Unity-ready .gitignore.',
+    'ut.status': 'Status',
+    'ut.gitEnv': 'UniGit requires',
+    'ut.gitEnvV': 'Unity 2021.3 LTS or later, Git 2.20 or later, Windows/macOS/Linux',
+    'ut.cellFormats': 'UniCell formats',
+
+    'ct.docTitle': 'Clash Tactica | TRIBGAMES',
+    'ct.title1': 'Mix and match your heroes,',
+    'ct.title2': 'hold back the incoming horde.',
+    'ct.lede': 'Clash Tactica is a casual defense game where you combine characters and skills in different ways to hold off waves of incoming enemies.',
+    'ct.storesNote': 'Coming soon to Android and iOS. Store links will appear here at launch.',
+    'ct.charsTitle': 'A cast of heroes, each with a style of their own.',
+    'ct.c001': 'Medea',
+    'ct.c002': 'Altair',
+    'ct.c003': 'Erwen',
+    'ct.c004': 'Aramis',
+    'ct.c005': 'Catalunya',
+    'ct.c006': 'Jane',
+    'ct.c008': 'Orphee',
+    'ct.c010': 'Chiyome',
+    'ct.c012': 'Jeanne',
+    'ct.c013': 'Recon',
+    'ct.c016': 'Teresa',
+    'ct.c017': 'Master Park',
+    'ct.aboutLabel': 'About the game',
+    'ct.aboutTitle': 'Easy to pick up, deeper with every combo.',
+    'ct.f1.t': 'Defense',
+    'ct.f1.d': 'Guard the wall and hold back every wave of incoming enemies.',
+    'ct.f2.t': 'Endless combinations',
+    'ct.f2.d': 'Which characters and skills you pair up changes every battle.',
+    'ct.f3.t': 'Characters and gear',
+    'ct.f3.d': 'Level up each character and their equipment for the next fight.',
+    'ct.genre': 'Genre',
+    'ct.genreV': 'Casual defense',
+    'ct.statusV': 'Coming soon',
+    'ct.engine': 'Engine'
   };
 
-  const isKoreanLocale = (value) => {
-    if (typeof value !== 'string') {
-      return false;
-    }
-    const normalized = value.trim().toLowerCase();
-    return normalized.startsWith('ko');
-  };
+  const isKoreanLocale = (value) => typeof value === 'string' && value.trim().toLowerCase().startsWith('ko');
 
   const detectDefaultLanguage = () => {
     try {
       const nav = window.navigator;
-      if (nav) {
-        const candidates = [];
-        if (Array.isArray(nav.languages)) {
-          candidates.push(...nav.languages);
-        }
-        if (typeof nav.language === 'string') {
-          candidates.push(nav.language);
-        }
-        if (typeof nav.userLanguage === 'string') {
-          candidates.push(nav.userLanguage);
-        }
-        for (const candidate of candidates) {
-          if (isKoreanLocale(candidate)) {
-            return 'ko';
-          }
-        }
-      }
+      const candidates = [...(Array.isArray(nav.languages) ? nav.languages : []), nav.language, nav.userLanguage];
+      if (candidates.some(isKoreanLocale)) return 'ko';
     } catch (error) {
       /* ignore navigator access errors */
     }
     return 'en';
   };
 
-  const states = [];
-
   const getSavedLanguage = () => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored && translations[stored]) {
-        return stored;
-      }
+      if (LANGS.includes(stored)) return stored;
     } catch (error) {
       /* localStorage unavailable */
     }
@@ -154,75 +261,45 @@
     }
   };
 
+  const states = [];
   const closeAll = (exceptComponent) => {
     states.forEach((state) => {
-      if (exceptComponent && state.component === exceptComponent) {
-        return;
-      }
-      state.closeMenu();
+      if (state.component !== exceptComponent) state.closeMenu();
     });
   };
 
   const applyLanguage = (lang) => {
-    const targetLang = translations[lang] ? lang : 'ko';
-    const dictionary = translations[targetLang];
-
-    document.documentElement.lang = targetLang === 'en' ? 'en' : 'ko';
+    const target = LANGS.includes(lang) ? lang : 'ko';
+    document.documentElement.lang = target;
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
-      const key = node.getAttribute('data-i18n');
-      if (!key) {
-        return;
-      }
-      const text = dictionary[key];
-      if (typeof text === 'string') {
-        node.textContent = text;
-      }
+      if (node.dataset.i18nKo === undefined) node.dataset.i18nKo = node.textContent;
+      const text = target === 'en' ? en[node.dataset.i18n] : node.dataset.i18nKo;
+      if (typeof text === 'string') node.textContent = text;
     });
 
     document.querySelectorAll('[data-lang-block]').forEach((node) => {
-      const blockLang = node.getAttribute('data-lang-block');
-      node.hidden = blockLang !== targetLang;
+      node.hidden = node.getAttribute('data-lang-block') !== target;
     });
 
     states.forEach((state) => {
-      state.updateSelection(targetLang);
+      state.updateSelection(target);
       state.closeMenu();
     });
 
-    saveLanguage(targetLang);
+    saveLanguage(target);
   };
 
-  const components = Array.from(document.querySelectorAll('[data-language-select]'));
-  if (!components.length) {
-    return;
-  }
-
-  components.forEach((component) => {
+  document.querySelectorAll('[data-language-select]').forEach((component) => {
     const toggle = component.querySelector('.language-select__toggle');
     const menu = component.querySelector('.language-select__menu');
     const current = component.querySelector('[data-language-current]');
     const options = Array.from(component.querySelectorAll('[data-language-option]'));
 
-    if (!toggle || !menu || !current || !options.length) {
-      return;
-    }
-
     const closeMenu = () => {
       component.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
       menu.hidden = true;
-    };
-
-    const updateSelection = (value) => {
-      options.forEach((option) => {
-        const isSelected = option.dataset.languageOption === value;
-        option.setAttribute('aria-selected', isSelected ? 'true' : 'false');
-        if (isSelected) {
-          current.textContent = option.textContent;
-        }
-      });
-      component.dataset.languageValue = value;
     };
 
     const openMenu = () => {
@@ -232,17 +309,21 @@
       menu.hidden = false;
     };
 
-    states.push({ component, toggle, menu, options, updateSelection, closeMenu });
+    const updateSelection = (value) => {
+      options.forEach((option) => {
+        const selected = option.dataset.languageOption === value;
+        option.setAttribute('aria-selected', selected ? 'true' : 'false');
+        if (selected) current.textContent = option.textContent;
+      });
+    };
 
+    states.push({ component, updateSelection, closeMenu });
     menu.hidden = true;
 
     toggle.addEventListener('click', (event) => {
       event.stopPropagation();
-      if (component.classList.contains('is-open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
+      if (component.classList.contains('is-open')) closeMenu();
+      else openMenu();
     });
 
     toggle.addEventListener('keydown', (event) => {
@@ -255,22 +336,12 @@
       }
     });
 
-    menu.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
+    menu.addEventListener('click', (event) => event.stopPropagation());
 
     options.forEach((option, index) => {
       option.addEventListener('click', (event) => {
         event.preventDefault();
-        event.stopPropagation();
-        const value = option.dataset.languageOption || 'ko';
-        applyLanguage(value);
-        component.dispatchEvent(
-          new CustomEvent('language-select:change', {
-            detail: { value },
-            bubbles: true
-          })
-        );
+        applyLanguage(option.dataset.languageOption);
         toggle.focus();
       });
 
@@ -281,12 +352,10 @@
           toggle.focus();
         } else if (event.key === 'ArrowDown') {
           event.preventDefault();
-          const next = options[index + 1] || options[0];
-          next.focus();
+          (options[index + 1] || options[0]).focus();
         } else if (event.key === 'ArrowUp') {
           event.preventDefault();
-          const prev = options[index - 1] || options[options.length - 1];
-          prev.focus();
+          (options[index - 1] || options[options.length - 1]).focus();
         } else if (event.key === 'Tab') {
           closeMenu();
         }
@@ -294,16 +363,10 @@
     });
   });
 
-  const initialLang = getSavedLanguage() || detectDefaultLanguage();
-  applyLanguage(initialLang);
+  applyLanguage(getSavedLanguage() || detectDefaultLanguage());
 
-  document.addEventListener('click', () => {
-    closeAll();
-  });
-
+  document.addEventListener('click', () => closeAll());
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeAll();
-    }
+    if (event.key === 'Escape') closeAll();
   });
 })();

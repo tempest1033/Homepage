@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="ut.docTitle">UniGit · UniCell — Unity 에디터 도구 | 트리비게임즈</title>
+  <meta name="description" content="UniGit은 Unity 에디터 안의 Git 클라이언트, UniCell은 CSV·TSV·ScriptableObject 테이블을 스프레드시트처럼 편집하는 데이터 에디터입니다.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__brand" href="../../" aria-label="TRIBGAMES 홈">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="header__logo" width="600" height="117">
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../../#games" data-i18n="nav.games" aria-current="page">게임</a>
+        <a href="../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">
+        <div class="language-select" data-language-select>
+          <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <span class="language-select__current" data-language-current>한국어</span>
+          </button>
+          <ul class="language-select__menu" role="listbox" hidden>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="ko" aria-selected="true">한국어</button></li>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="en" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumb" aria-label="위치"><a href="../../#games" data-i18n="nav.games">게임</a><span aria-hidden="true">/</span><span>UniGit · UniCell</span></nav>
+        <div class="page-hero__id">
+          <div><strong>UniGit · UniCell</strong><span data-i18n="common.cat.ut">Unity 에디터 도구</span></div>
+        </div>
+        <h1 class="h-display"><span data-i18n="ut.title1">Git과 데이터 편집을</span><span data-i18n="ut.title2">Unity 안에서 끝냅니다.</span></h1>
+        <p class="lede" data-i18n="ut.lede">Clash Tactica를 개발하면서 직접 만들어 쓰는 Unity 에디터 확장입니다. 버전 관리와 게임 데이터 편집을 에디터를 떠나지 않고 처리합니다.</p>
+        <div class="page-hero__actions">
+          <a href="mailto:support@tribgames.com" class="btn btn--primary"><span data-i18n="ut.contact">도입 문의</span> <i aria-hidden="true">→</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split" data-reveal>
+          <div class="split__text">
+            <h2 class="h-section">UniCell</h2>
+            <p data-i18n="ut.cell.desc">CSV·TSV·ScriptableObject 테이블을 스프레드시트처럼 편집합니다. 수백 줄짜리 밸런스 데이터도 Unity 창 하나에서 바로 수정합니다.</p>
+            <ul>
+              <li data-i18n="ut.cell.1">셀 선택, 복사·붙여넣기, 행·열 삽입과 삭제</li>
+              <li data-i18n="ut.cell.2">정렬과 텍스트 필터</li>
+              <li data-i18n="ut.cell.3">컬럼 규칙, ID 수식, 밸런스 팩터 카드</li>
+              <li data-i18n="ut.cell.4">런타임에서 불러올 수 있는 ScriptableObject 테이블</li>
+            </ul>
+          </div>
+          <div class="split__media split__media--dark">
+            <img src="../../assets/img/unicell.jpg" alt="UniCell 데이터 테이블 편집 화면" width="1456" height="1073">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section">UniGit</h2>
+          </div>
+          <p data-i18n="ut.git.desc">Unity 에디터 안에 들어간 Git 클라이언트입니다. 커밋부터 GitHub 연동까지 터미널 없이 처리합니다.</p>
+        </div>
+        <div class="features" data-reveal>
+          <div class="feature"><h3 data-i18n="ut.git.f1.t">기본 Git 작업</h3><p data-i18n="ut.git.f1.d">스테이징, 커밋, 푸시·풀·페치, 브랜치, 스태시, 체리픽, 리셋을 버튼으로 처리합니다.</p></div>
+          <div class="feature"><h3 data-i18n="ut.git.f2.t">CSV 셀 단위 비교</h3><p data-i18n="ut.git.f2.d">게임 데이터 CSV는 바뀐 셀만 나란히 비교해 보여줍니다.</p></div>
+          <div class="feature"><h3 data-i18n="ut.git.f3.t">커밋 기록</h3><p data-i18n="ut.git.f3.d">작성자·날짜·메시지와 바뀐 파일을 보고, 파일별 기록과 앞선·뒤처진 커밋 수를 확인합니다.</p></div>
+          <div class="feature"><h3 data-i18n="ut.git.f4.t">Project 창 연동</h3><p data-i18n="ut.git.f4.d">파일과 폴더에 변경 상태를 색 점으로 표시하고, 우클릭으로 커밋·되돌리기·기록 보기를 엽니다.</p></div>
+          <div class="feature"><h3 data-i18n="ut.git.f5.t">GitHub 연동</h3><p data-i18n="ut.git.f5.d">에디터에서 GitHub에 로그인하고 저장소를 만들거나 복제합니다.</p></div>
+          <div class="feature"><h3 data-i18n="ut.git.f6.t">설정 마법사</h3><p data-i18n="ut.git.f6.d">Git 확인, 사용자 정보, GitHub 연동, 프로젝트 설정을 4단계로 안내하고 Unity용 .gitignore를 만들어 줍니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="common.infoTitle">한눈에 보기</h2>
+          </div>
+        </div>
+        <dl class="specs">
+          <div><dt data-i18n="common.type">분류</dt><dd data-i18n="common.cat.ut">Unity 에디터 도구</dd></div>
+          <div><dt data-i18n="ut.gitEnv">UniGit 환경</dt><dd data-i18n="ut.gitEnvV">Unity 2021.3 LTS 이상, Git 2.20 이상, Windows·macOS·Linux</dd></div>
+          <div><dt data-i18n="ut.cellFormats">UniCell 형식</dt><dd>CSV, TSV, ScriptableObject</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="label" data-i18n="common.more">다른 제품</p>
+          </div>
+        </div>
+        <div class="more">
+          <a href="../../games/"><span data-i18n="common.cat.game">모바일 게임</span><strong>Clash Tactica</strong></a>
+          <a href="../mixdog/"><span data-i18n="common.cat.mx">AI 코딩 에이전트</span><strong>Mixdog</strong></a>
+          <a href="../gamerscroll/"><span data-i18n="common.cat.gs">게임 시장 데이터</span><strong>GamerScroll</strong></a>
+          <a href="../aiscroll/"><span data-i18n="common.cat.ai">AI 리뷰 미디어</span><strong>AIScroll</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="../../games/">Clash Tactica</a></li>
+              <li><a href="../gamerscroll/">GamerScroll</a></li>
+              <li><a href="../unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../mixdog/">Mixdog</a></li>
+              <li><a href="../aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="../../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/language.js"></script>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

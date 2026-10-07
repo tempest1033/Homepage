@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="ct.docTitle">클래시 택티카 | 트리비게임즈</title>
+  <meta name="description" content="다양한 조합으로 몰려오는 적을 막아내는 캐주얼 디펜스 모바일 게임. 트리비게임즈 개발.">
+  <meta name="theme-color" content="#16203a">
+  <meta property="og:image" content="https://tribgames.com/assets/img/ct-keyart.jpg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__brand" href="../" aria-label="TRIBGAMES 홈">
+        <img src="../assets/ComLogo.png" alt="TRIBGAMES" class="header__logo" width="600" height="117">
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../#games" data-i18n="nav.games" aria-current="page">게임</a>
+        <a href="../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">
+        <div class="language-select" data-language-select>
+          <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <span class="language-select__current" data-language-current>한국어</span>
+          </button>
+          <ul class="language-select__menu" role="listbox" hidden>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="ko" aria-selected="true">한국어</button></li>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="en" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="game-hero on-dark">
+      <div class="container game-hero__inner">
+        <div>
+          <nav class="crumb" aria-label="위치"><a href="../#games" data-i18n="nav.games">게임</a><span aria-hidden="true">/</span><span>Clash Tactica</span></nav>
+          <img src="../assets/img/ct-logo.webp" alt="Clash Tactica" class="game-hero__logo" width="552" height="574">
+          <h1 class="h-display"><span data-i18n="ct.title1">다양한 조합으로,</span><span data-i18n="ct.title2">몰려오는 적을 막아냅니다.</span></h1>
+          <p class="lede" data-i18n="ct.lede">클래시 택티카는 캐릭터와 스킬을 다양하게 조합해 몰려오는 적을 막아내는 캐주얼 디펜스 게임입니다.</p>
+          <div class="stores">
+            <img src="../assets/badge-google-play.svg" alt="Google Play" width="180" height="53">
+            <img src="../assets/badge-app-store.svg" alt="App Store" width="160" height="53">
+            <p class="stores__note" data-i18n="ct.storesNote">Android와 iOS 출시를 준비하고 있습니다. 출시 후 이곳에 스토어 링크가 연결됩니다.</p>
+          </div>
+        </div>
+        <figure class="game-hero__art">
+          <img src="../assets/img/ct-keyart.jpg" alt="클래시 택티카 키 아트" width="1600" height="868">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="ct.charsTitle">개성 넘치는 캐릭터들이 함께 싸웁니다.</h2>
+          </div>
+        </div>
+        <div class="roster" data-reveal>
+          <figure><img src="../assets/img/chars/c001.webp" alt="" width="318" height="440" loading="lazy"><figcaption data-i18n="ct.c001">메데이아</figcaption></figure>
+          <figure><img src="../assets/img/chars/c002.webp" alt="" width="283" height="440" loading="lazy"><figcaption data-i18n="ct.c002">알타이르</figcaption></figure>
+          <figure><img src="../assets/img/chars/c003.webp" alt="" width="324" height="440" loading="lazy"><figcaption data-i18n="ct.c003">에르웬</figcaption></figure>
+          <figure><img src="../assets/img/chars/c004.webp" alt="" width="276" height="440" loading="lazy"><figcaption data-i18n="ct.c004">아라미스</figcaption></figure>
+          <figure><img src="../assets/img/chars/c005.webp" alt="" width="408" height="434" loading="lazy"><figcaption data-i18n="ct.c005">카탈루냐</figcaption></figure>
+          <figure><img src="../assets/img/chars/c006.webp" alt="" width="337" height="440" loading="lazy"><figcaption data-i18n="ct.c006">제인</figcaption></figure>
+          <figure><img src="../assets/img/chars/c008.webp" alt="" width="357" height="435" loading="lazy"><figcaption data-i18n="ct.c008">오르페</figcaption></figure>
+          <figure><img src="../assets/img/chars/c010.webp" alt="" width="321" height="440" loading="lazy"><figcaption data-i18n="ct.c010">치요메</figcaption></figure>
+          <figure><img src="../assets/img/chars/c012.webp" alt="" width="348" height="440" loading="lazy"><figcaption data-i18n="ct.c012">잔</figcaption></figure>
+          <figure><img src="../assets/img/chars/c013.webp" alt="" width="379" height="440" loading="lazy"><figcaption data-i18n="ct.c013">레콘</figcaption></figure>
+          <figure><img src="../assets/img/chars/c016.webp" alt="" width="334" height="440" loading="lazy"><figcaption data-i18n="ct.c016">테레사</figcaption></figure>
+          <figure><img src="../assets/img/chars/c017.webp" alt="" width="305" height="440" loading="lazy"><figcaption data-i18n="ct.c017">박 도사</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="ct.aboutTitle">가볍게 시작하고, 조합으로 깊어집니다.</h2>
+          </div>
+        </div>
+        <div class="features" data-reveal>
+          <div class="feature"><h3 data-i18n="ct.f1.t">디펜스</h3><p data-i18n="ct.f1.d">성벽을 지키며 웨이브마다 몰려오는 적을 막아냅니다.</p></div>
+          <div class="feature"><h3 data-i18n="ct.f2.t">다양한 조합</h3><p data-i18n="ct.f2.d">어떤 캐릭터와 스킬을 함께 쓰느냐에 따라 매 판 전투가 달라집니다.</p></div>
+          <div class="feature"><h3 data-i18n="ct.f3.t">캐릭터와 장비</h3><p data-i18n="ct.f3.d">캐릭터마다 레벨과 장비를 올려 다음 전투를 준비합니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="common.infoTitle">한눈에 보기</h2>
+          </div>
+        </div>
+        <dl class="specs">
+          <div><dt data-i18n="ct.genre">장르</dt><dd data-i18n="ct.genreV">캐주얼 디펜스</dd></div>
+          <div><dt data-i18n="common.platform">플랫폼</dt><dd>Android · iOS</dd></div>
+          <div><dt data-i18n="ut.status">상태</dt><dd data-i18n="ct.statusV">출시 준비 중</dd></div>
+          <div><dt data-i18n="ct.engine">엔진</dt><dd>Unity</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="label" data-i18n="common.more">다른 제품</p>
+          </div>
+        </div>
+        <div class="more">
+          <a href="../products/mixdog/"><span data-i18n="common.cat.mx">AI 코딩 에이전트</span><strong>Mixdog</strong></a>
+          <a href="../products/gamerscroll/"><span data-i18n="common.cat.gs">게임 시장 데이터</span><strong>GamerScroll</strong></a>
+          <a href="../products/aiscroll/"><span data-i18n="common.cat.ai">AI 리뷰 미디어</span><strong>AIScroll</strong></a>
+          <a href="../products/unity-tools/"><span data-i18n="common.cat.ut">Unity 에디터 도구</span><strong>UniGit · UniCell</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <img src="../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="./">Clash Tactica</a></li>
+              <li><a href="../products/gamerscroll/">GamerScroll</a></li>
+              <li><a href="../products/unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../products/mixdog/">Mixdog</a></li>
+              <li><a href="../products/aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/language.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

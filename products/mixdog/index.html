@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="mx.docTitle">Mixdog — 토큰을 63% 덜 쓰는 오픈소스 코딩 에이전트 | 트리비게임즈</title>
+  <meta name="description" content="Mixdog은 트리비게임즈가 만드는 무료 오픈소스 데스크톱 코딩 에이전트입니다. 같은 모델, 같은 성능으로 토큰은 63% 덜 씁니다.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__brand" href="../../" aria-label="TRIBGAMES 홈">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="header__logo" width="600" height="117">
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../../#games" data-i18n="nav.games">게임</a>
+        <a href="../../#ai" data-i18n="nav.ai" aria-current="page">AI</a>
+        <a href="../../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">
+        <div class="language-select" data-language-select>
+          <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <span class="language-select__current" data-language-current>한국어</span>
+          </button>
+          <ul class="language-select__menu" role="listbox" hidden>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="ko" aria-selected="true">한국어</button></li>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="en" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumb" aria-label="위치"><a href="../../#ai">AI</a><span aria-hidden="true">/</span><span>Mixdog</span></nav>
+        <div class="page-hero__id">
+          <img src="../../assets/img/mixdog-icon.png" alt="" class="page-hero__icon" width="144" height="144">
+          <div><strong>Mixdog</strong><span data-i18n="mx.cat">AI 코딩 에이전트</span></div>
+        </div>
+        <h1 class="h-display"><span data-i18n="mx.title1">실력은 그대로,</span><span data-i18n="mx.title2">토큰은 63% 덜 씁니다.</span></h1>
+        <p class="lede" data-i18n="mx.lede">Mixdog은 무료 오픈소스 데스크톱 코딩 에이전트입니다. 별도 결제 없이 이미 이용 중인 Claude, ChatGPT, Grok 구독을 연결해 바로 쓸 수 있습니다.</p>
+        <div class="page-hero__actions">
+          <a href="https://github.com/tribgames/mixdog/releases/latest/download/mixdog-desktop-win-x64.exe" class="btn btn--primary"><span data-i18n="mx.dlWin">Windows용 다운로드</span> <i aria-hidden="true">↓</i></a>
+          <a href="https://github.com/tribgames/mixdog/releases/latest/download/mixdog-desktop-mac-arm64.dmg" class="btn btn--line"><span data-i18n="mx.dlMac">macOS용 다운로드</span></a>
+          <a href="https://github.com/tribgames/mixdog" target="_blank" rel="noopener" class="btn btn--line">GitHub <i aria-hidden="true">↗</i></a>
+        </div>
+        <p class="page-hero__note" data-i18n="mx.note">무료 · Apache-2.0 라이선스 · Windows x64, Apple Silicon Mac</p>
+        <div class="showcase showcase--dark" data-reveal>
+          <img src="../../assets/img/mixdog-swarm.jpg" alt="여러 에이전트가 나눠 작업하는 Mixdog 화면" width="1124" height="704">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="mx.featuresTitle">코딩부터 문서 작업까지, 창 하나에서.</h2>
+          </div>
+        </div>
+        <div class="features" data-reveal>
+          <div class="feature"><h3 data-i18n="mx.f1.t">같은 점수, 적은 토큰</h3><p data-i18n="mx.f1.d">Terminal-Bench 2.1 과제 89개를 같은 모델로 실행했을 때 성공률은 86.5%로 Codex CLI(86.1%)와 비슷했고, 전체 토큰은 63% 적게 썼습니다.</p></div>
+          <div class="feature"><h3 data-i18n="mx.f2.t">여러 모델을 한 팀으로</h3><p data-i18n="mx.f2.d">고성능 모델이 계획을 세우면, 저렴한 모델 여럿이 검색과 수정, 리뷰를 동시에 맡습니다.</p></div>
+          <div class="feature"><h3 data-i18n="mx.f3.t">에디터, 터미널, Git을 한곳에</h3><p data-i18n="mx.f3.d">코드 편집부터 테스트, 커밋, PR 생성까지 앱을 벗어나지 않고 끝냅니다.</p></div>
+          <div class="feature"><h3 data-i18n="mx.f4.t">휴대폰에서 이어서</h3><p data-i18n="mx.f4.d">종단간 암호화된 모바일 원격 제어로 밖에서도 작업을 확인하고 지시합니다.</p></div>
+          <div class="feature"><h3 data-i18n="mx.f5.t">코드 밖의 일도</h3><p data-i18n="mx.f5.d">브라우저와 데스크톱 앱을 직접 조작하고, Word·Excel·PowerPoint·PDF 문서를 작성하고 편집합니다.</p></div>
+          <div class="feature"><h3 data-i18n="mx.f6.t">내 GPU로 로컬 모델</h3><p data-i18n="mx.f6.d">앱 안에서 모델을 내려받아 내 PC에서 직접 실행할 수 있습니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="split" data-reveal>
+          <div class="split__text">
+            <h2 class="h-section" data-i18n="mx.s1.title">여러 작업을 동시에.</h2>
+            <p data-i18n="mx.s1.desc">창을 여러 개로 나누어 각각 독립된 세션에 다른 작업을 맡길 수 있습니다. 한쪽에서 기능을 개발하는 동안 다른 쪽에서 버그를 수정합니다.</p>
+          </div>
+          <div class="split__media split__media--dark">
+            <img src="../../assets/img/mixdog-parallel.jpg" alt="두 세션을 나란히 띄운 Mixdog 화면" width="1124" height="704" loading="lazy">
+          </div>
+        </div>
+        <div class="split split--flip" data-reveal>
+          <div class="split__text">
+            <h2 class="h-section" data-i18n="mx.s2.title">토큰이 어디에 쓰였는지 한눈에 보입니다.</h2>
+            <p data-i18n="mx.s2.desc">제공사와 모델별 토큰 사용량, 비용, 구독 한도, 초기화 시점을 한 화면에서 확인합니다.</p>
+          </div>
+          <div class="split__media split__media--dark">
+            <img src="../../assets/img/mixdog-usage.jpg" alt="Mixdog 토큰 사용량 화면" width="1124" height="704" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="common.infoTitle">한눈에 보기</h2>
+          </div>
+        </div>
+        <dl class="specs">
+          <div><dt data-i18n="common.type">분류</dt><dd data-i18n="mx.cat">AI 코딩 에이전트</dd></div>
+          <div><dt data-i18n="common.price">가격</dt><dd data-i18n="mx.priceV">무료 (모델 사용료는 각 제공사 구독·API 키)</dd></div>
+          <div><dt data-i18n="common.platform">플랫폼</dt><dd data-i18n="mx.platformV">Windows x64, Apple Silicon Mac, 명령줄(Node.js)</dd></div>
+          <div><dt data-i18n="common.license">라이선스</dt><dd>Apache-2.0</dd></div>
+          <div><dt data-i18n="mx.models">지원 모델</dt><dd data-i18n="mx.modelsV">Claude, ChatGPT·Codex, Gemini, Grok, OpenRouter, DeepSeek, 로컬 모델</dd></div>
+          <div><dt data-i18n="common.links">링크</dt><dd><a href="https://github.com/tribgames/mixdog" target="_blank" rel="noopener">GitHub</a> · <a href="https://aiscroll.io/ko/mixdog/" target="_blank" rel="noopener" data-i18n="mx.introPage">소개 페이지</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="label" data-i18n="common.more">다른 제품</p>
+          </div>
+        </div>
+        <div class="more">
+          <a href="../../games/"><span data-i18n="common.cat.game">모바일 게임</span><strong>Clash Tactica</strong></a>
+          <a href="../gamerscroll/"><span data-i18n="common.cat.gs">게임 시장 데이터</span><strong>GamerScroll</strong></a>
+          <a href="../aiscroll/"><span data-i18n="common.cat.ai">AI 리뷰 미디어</span><strong>AIScroll</strong></a>
+          <a href="../unity-tools/"><span data-i18n="common.cat.ut">Unity 에디터 도구</span><strong>UniGit · UniCell</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <img src="../../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="../../games/">Clash Tactica</a></li>
+              <li><a href="../gamerscroll/">GamerScroll</a></li>
+              <li><a href="../unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../mixdog/">Mixdog</a></li>
+              <li><a href="../aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="../../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/language.js"></script>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,31 +1,37 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>트리비게임즈</title>
-  <meta name="description" content="나만의 전략으로 완성되는 덱빌딩 전략 게임, 클래시 택티카: 머지 배틀">
-
-  <link rel="preload" href="assets/Title.png" as="image" fetchpriority="high">
-  <link rel="preload" href="assets/GameLogo.png" as="image">
-  
-  <!-- Preload Font -->
+  <title data-i18n="home.docTitle">트리비게임즈 TRIBGAMES — 게임과 AI를 만드는 스튜디오</title>
+  <meta name="description" content="트리비게임즈는 게임과 AI 두 분야에서 제품을 만드는 경기도 용인의 스튜디오입니다. 모바일 게임 Clash Tactica, 게임 시장 데이터 GamerScroll, Unity 에디터 도구, 코딩 에이전트 Mixdog, AI 미디어 AIScroll을 만들고 운영합니다.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="TRIBGAMES">
+  <meta property="og:description" content="게임과 AI를 만드는 스튜디오">
+  <meta property="og:image" content="https://tribgames.com/assets/img/ct-keyart.jpg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
-    <div class="header__inner">
-      <a class="header__brand" href="./" aria-label="트리비게임즈 홈">
-        <img src="assets/ComLogo.png" alt="TRIBGAMES" class="header__logo">
+    <div class="container header__inner">
+      <a class="header__brand" href="./" aria-label="TRIBGAMES 홈">
+        <img src="assets/ComLogo.png" alt="TRIBGAMES" class="header__logo" width="600" height="117">
       </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="#games" data-i18n="nav.games">게임</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#company" data-i18n="nav.company">회사 소개</a>
+        <a href="#history" data-i18n="nav.history">연혁</a>
+      </nav>
       <div class="header__actions">
         <div class="language-select" data-language-select>
           <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
-            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2"/>
-              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.2"/>
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
             </svg>
             <span class="language-select__current" data-language-current>한국어</span>
           </button>
@@ -38,47 +44,252 @@
     </div>
   </header>
 
-  <main class="hero">
-    <div class="hero__inner">
-      <div class="hero__content">
-        <img src="assets/GameLogo.png" alt="Clash Tactica: Merge Battle" class="hero__game-logo">
-        <div class="hero__bottom">
-          <p class="hero__tagline">
-            <span data-i18n="home.heroLine1">나만의 전략으로 완성되는 덱빌딩 전략 게임</span><br>
-            <strong data-i18n="home.heroLine2">클래시 택티카: 머지 배틀</strong>
-          </p>
-          <div class="hero__buttons">
-            <a href="#" class="store-btn" aria-label="Google Play에서 다운로드">
-              <img src="assets/badge-google-play.svg" alt="Google Play">
-            </a>
-            <a href="#" class="store-btn" aria-label="App Store에서 다운로드">
-              <img src="assets/badge-app-store.svg" alt="App Store">
-            </a>
-          </div>
+  <main>
+    <!-- Intro: two pillars -->
+    <section class="intro">
+      <div class="container">
+        <div class="intro__banner">
+          <h1 class="h-display">
+            <span data-i18n="home.title1">게임과 AI를 넘나들며</span>
+            <span data-i18n="home.title2">새로운 가능성을 엽니다.</span>
+          </h1>
+          <p class="lede" data-i18n="home.lede">트리비게임즈는 게임과 AI 도구를 직접 개발하고 서비스하는 스튜디오입니다.</p>        </div>
+        <div class="pillars">
+          <a href="#games" class="pillar">
+            <span class="pillar__name">Games</span>
+            <p data-i18n="home.pillar.games">모바일 게임, 게임 시장 데이터 서비스, Unity 개발 도구를 만듭니다.</p>
+            <span class="pillar__items">Clash Tactica · GamerScroll · UniGit · UniCell</span>
+            <i aria-hidden="true">↓</i>
+          </a>
+          <a href="#ai" class="pillar">
+            <span class="pillar__name">AI</span>
+            <p data-i18n="home.pillar.ai">AI 코딩 에이전트와 AI 리뷰 미디어를 만듭니다.</p>
+            <span class="pillar__items">Mixdog · AIScroll</span>
+            <i aria-hidden="true">↓</i>
+          </a>
         </div>
       </div>
-      <div class="hero__bg">
-        <img src="assets/Title.png" alt="" class="hero__bg-img">
-        <div class="hero__overlay"></div>
+    </section>
+
+    <!-- Games -->
+    <section class="section section--tight" id="games">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="home.games.title">게임을 만들고, 게임을 위한 도구와 데이터를 제공합니다.</h2>
+          </div>        </div>
+
+        <div class="tiles">
+          <a href="games/" class="tile tile--wide tile--game" data-reveal>
+            <div class="tile__text">
+              <p class="tile__cat" data-i18n="home.ct.cat">모바일 게임 · 출시 준비 중</p>
+              <img src="assets/img/ct-logo.webp" alt="" class="tile__logo" width="552" height="574">
+              <h3 class="tile__name" data-i18n="product.ct.name">클래시 택티카</h3>
+              <p class="tile__desc" data-i18n="home.ct.desc">다양한 조합으로 몰려오는 적을 막아내는 캐주얼 디펜스 게임. Android와 iOS 출시를 준비하고 있습니다.</p>
+            </div>
+            <div class="tile__art" aria-hidden="true">
+              <img src="assets/img/ct-keyart.jpg" alt="" width="1600" height="868" loading="lazy">
+            </div>
+            <span class="tile__go" aria-hidden="true">→</span>
+          </a>
+
+          <a href="products/gamerscroll/" class="tile" data-reveal>
+            <div class="tile__text">
+              <p class="tile__cat" data-i18n="home.gs.cat">게임 시장 데이터</p>
+              <h3 class="tile__name">GamerScroll</h3>
+              <p class="tile__desc" data-i18n="home.gs.desc">5개국 모바일 게임 매출 순위와 스팀 동시 접속자 수를 매일 기록하고 분석합니다.</p>
+            </div>
+            <div class="tile__media">
+              <img src="assets/img/gamerscroll-home.jpg" alt="GamerScroll 화면" class="tile__shot" width="1600" height="1000" loading="lazy">
+            </div>
+            <span class="tile__go" aria-hidden="true">→</span>
+          </a>
+
+          <a href="products/unity-tools/" class="tile tile--dark" data-reveal>
+            <div class="tile__text">
+              <p class="tile__cat" data-i18n="home.ut.cat">Unity 에디터 도구</p>
+              <h3 class="tile__name">UniGit · UniCell</h3>
+              <p class="tile__desc" data-i18n="home.ut.desc">Unity 안에서 쓰는 Git 클라이언트와 스프레드시트형 데이터 테이블 에디터.</p>
+            </div>
+            <div class="tile__media">
+              <img src="assets/img/unicell.jpg" alt="UniCell 화면" class="tile__shot" width="1456" height="1073" loading="lazy">
+            </div>
+            <span class="tile__go" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- AI -->
+    <section class="section section--tight" id="ai">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="home.ai.title">AI 에이전트를 만들고, AI와 관련된 다양한 인사이트를 공유합니다.</h2>
+          </div>        </div>
+
+        <div class="tiles">
+          <a href="products/mixdog/" class="tile tile--wide tile--dark" data-reveal>
+            <div class="tile__text">
+              <p class="tile__cat" data-i18n="home.mx.cat">AI 코딩 에이전트 · 무료 오픈소스</p>
+              <h3 class="tile__name">Mixdog</h3>
+              <p class="tile__desc" data-i18n="home.mx.desc">같은 모델로 동일한 성능을 내면서 토큰은 63% 덜 쓰는 데스크톱 코딩 에이전트.</p>
+            </div>
+            <div class="tile__media">
+              <img src="assets/img/mixdog-swarm.jpg" alt="Mixdog 앱 화면" class="tile__shot" width="1124" height="704" loading="lazy">
+            </div>
+            <span class="tile__go" aria-hidden="true">→</span>
+          </a>
+
+          <a href="products/aiscroll/" class="tile tile--wide" data-reveal>
+            <div class="tile__text">
+              <p class="tile__cat" data-i18n="home.ai.cat">AI 리뷰 미디어</p>
+              <h3 class="tile__name">AIScroll</h3>
+              <p class="tile__desc" data-i18n="home.ai.desc">AI 모델과 코딩 도구를 직접 써보고 측정한 리뷰와 분석을 전합니다.</p>
+            </div>
+            <div class="tile__media">
+              <img src="assets/img/aiscroll-home.jpg" alt="AIScroll 화면" class="tile__shot" width="1600" height="1000" loading="lazy">
+            </div>
+            <span class="tile__go" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company -->
+    <section class="section" id="company">
+      <div class="container">
+        <div class="company">
+          <div class="company__intro" data-reveal>
+            <h2 class="h-section" data-i18n="home.companyTitle">직접 쓰려고 만든 것을 제품으로 내놓습니다.</h2>
+            <p class="lede" data-i18n="home.companyLede">트리비게임즈는 경기도 용인의 작은 개발 스튜디오입니다. 게임을 개발하며 필요한 도구를 직접 만들었고, 그 경험이 AI 코딩 에이전트로 이어졌습니다. 지금은 게임과 AI 두 분야의 제품을 함께 만들고 운영합니다.</p>
+          </div>
+          <ul class="areas" data-reveal>
+            <li>
+              <h3 data-i18n="nav.games">게임</h3>
+              <div>
+                <p data-i18n="home.area1.desc">Unity로 모바일 디펜스 게임을 개발하고, 게임 시장 데이터와 개발 도구를 만듭니다.</p>
+                <p class="areas__items"><a href="games/">Clash Tactica</a><a href="products/gamerscroll/">GamerScroll</a><a href="products/unity-tools/">UniGit · UniCell</a></p>
+              </div>
+            </li>
+            <li>
+              <h3>AI</h3>
+              <div>
+                <p data-i18n="home.area2.desc">AI 코딩 에이전트를 만들고, AI 모델과 도구 리뷰를 발행합니다.</p>
+                <p class="areas__items"><a href="products/mixdog/">Mixdog</a><a href="products/aiscroll/">AIScroll</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <dl class="facts" data-reveal>
+          <div><dt data-i18n="home.fact.name">회사명</dt><dd data-i18n="home.fact.nameV">트리비게임즈 (TRIBGAMES)</dd></div>
+          <div><dt data-i18n="home.fact.location">소재지</dt><dd data-i18n="home.fact.locationV">경기도 용인시 수지구</dd></div>
+          <div><dt data-i18n="home.fact.field">사업 분야</dt><dd data-i18n="home.fact.fieldV">게임 · AI 소프트웨어 개발</dd></div>
+          <div><dt data-i18n="home.fact.contact">문의</dt><dd><a href="mailto:support@tribgames.com">support@tribgames.com</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- History: product milestones, newest first -->
+    <section class="section" id="history">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="h-section" data-i18n="home.historyTitle">연혁</h2>
+          </div>
+        </div>
+        <ul class="news" data-reveal>
+          <li>
+            <a href="games/">
+              <span class="news__when" data-i18n="home.h.soon">출시 예정</span>
+              <span class="news__tag">Clash Tactica</span>
+              <span class="news__title" data-i18n="home.h.ct">클래시 택티카 Android·iOS 출시</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </li>
+          <li>
+            <a href="products/aiscroll/">
+              <time datetime="2026-10">2026.10</time>
+              <span class="news__tag">AIScroll</span>
+              <span class="news__title" data-i18n="home.h.ai2">AIScroll 전면 개편: 리뷰·분석·개발일지 중심으로</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </li>
+          <li>
+            <a href="products/gamerscroll/">
+              <time datetime="2026-10">2026.10</time>
+              <span class="news__tag">GamerScroll</span>
+              <span class="news__title" data-i18n="home.h.gs3">GamerScroll 5개 언어판 출시와 전면 개편</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </li>
+          <li>
+            <a href="products/mixdog/">
+              <time datetime="2026-09">2026.09</time>
+              <span class="news__tag">Mixdog</span>
+              <span class="news__title" data-i18n="home.h.mx2">Mixdog 1.0 정식 출시</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </li>
+          <li>
+            <a href="products/mixdog/">
+              <time datetime="2026-06">2026.06</time>
+              <span class="news__tag">Mixdog</span>
+              <span class="news__title" data-i18n="home.h.mx1">Mixdog 첫 공개 버전 배포</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__info">
-        <p data-i18n="footer.address">34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</p>
-        <p data-i18n="footer.email">support@tribgames.com</p>
-        <p data-i18n="footer.copyright">© 2025 TRIB GAMES All rights reserved.</p>
+    <div class="container">
+      <div class="footer__top">
+        <img src="assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="games/">Clash Tactica</a></li>
+              <li><a href="products/gamerscroll/">GamerScroll</a></li>
+              <li><a href="products/unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="products/mixdog/">Mixdog</a></li>
+              <li><a href="products/aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="footer__links">
-        <a href="terms/" data-i18n="footer.link.terms">이용약관</a>
-        <a href="privacy/" data-i18n="footer.link.privacy">개인정보처리정책</a>
-        <a href="account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a>
-      </nav>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
     </div>
   </footer>
 
   <script src="assets/language.js"></script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
