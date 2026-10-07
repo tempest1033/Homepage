@@ -17,11 +17,14 @@
   --header: 64px;
   --container: 1200px;
   --gutter: clamp(20px, 4vw, 40px);
-  --font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+  --font: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Set by the inline head script until Pretendard is ready (max 1s), so the first paint never shows a fallback-font swap */
+.font-wait body { visibility: hidden; }
 
 html {
   font-family: var(--font);
