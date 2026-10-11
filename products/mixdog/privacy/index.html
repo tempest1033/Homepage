@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Mixdog 개인정보 처리방침 | 트리비게임즈</title>
+  <meta name="description" content="트리비게임즈가 제공하는 Mixdog 데스크톱·모바일·웹 앱과 relay 서비스의 개인정보 처리방침입니다.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <script>(function(d){if(!d.fonts)return;var e=d.documentElement,f='1em "Pretendard Variable"',t='가A',done=function(){e.classList.remove('font-wait')};e.classList.add('font-wait');setTimeout(done,1000);Promise.all([d.fonts.load('400 '+f,t),d.fonts.load('700 '+f,t)]).then(done,done)})(document);</script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body class="legal-page">
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__brand" href="../../../" aria-label="TRIBGAMES 홈">
+        <img class="header__logo" src="../../../assets/ComLogo.png" alt="TRIBGAMES" width="600" height="117">
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
+        <a href="../../../#games" data-i18n="nav.games">게임</a>
+        <a href="../../../#ai" data-i18n="nav.ai">AI</a>
+        <a href="../../../#company" data-i18n="nav.company">회사 소개</a>
+        <a href="../../../#history" data-i18n="nav.history">연혁</a>
+      </nav>
+      <div class="header__actions">        <div class="language-select" data-language-select>
+          <button type="button" class="language-select__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="언어 선택">
+            <svg class="language-select__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2"/>
+              <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <span class="language-select__current" data-language-current>한국어</span>
+          </button>
+          <ul class="language-select__menu" role="listbox" hidden>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="ko" aria-selected="true">한국어</button></li>
+            <li><button type="button" role="option" class="language-select__option" data-language-option="en" aria-selected="false">English</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <article class="legal-container">
+      <h1>Mixdog 개인정보 처리방침</h1>
+      <p class="legal-meta">시행일: 2026년 10월 12일</p>
+
+      <h2>1. 총칙</h2>
+      <p>트리비게임즈(이하 “회사”)는 「개인정보 보호법」 등 관련 법령을 지킵니다. 이 처리방침은 회사가 제공하는 Mixdog 데스크톱 앱, Mixdog 모바일 앱(iOS·Android), 브라우저에서 쓰는 Mixdog 웹 앱, 그리고 이들을 이어 주는 relay 서비스(이하 “서비스”)에 적용됩니다. 회사의 게임 서비스에는 <a href="../../../privacy/">게임 개인정보 처리방침</a>이 적용됩니다.</p>
+      <p>Mixdog은 회원가입이나 회사 계정이 필요 없는 앱입니다. 회사는 이용자의 이름, 전화번호, 위치정보, 광고 식별자를 수집하지 않으며, 이용 통계나 분석 도구도 사용하지 않습니다. 코딩 작업의 내용(대화, 코드, 파일)은 회사 서버로 보내지 않습니다.</p>
+
+      <h2>2. 처리하는 정보 항목</h2>
+      <h3>가. 회사 서버(relay)에서 처리하는 정보</h3>
+      <p>모바일 앱이나 웹 앱으로 PC의 Mixdog에 원격으로 연결하려고 할 때에만 relay가 사용됩니다. 원격 연결을 쓰지 않으면 아래 정보는 생기지 않습니다. 단, 기능 개선 의견 보내기를 쓰는 경우에는 ‘다. 의견 보내기’ 항목이 적용됩니다.</p>
+      <ul>
+        <li><strong>PC 등록 정보(자동)</strong>: PC가 처음 연결할 때 만든 무작위 기기 ID, 기기 비밀값과 페어링 토큰의 해시값(원문은 저장하지 않음), 앱 버전, 화면 구성(renderer) 버전, 마지막 보고 시각</li>
+        <li><strong>연결된 기기 정보(페어링 시 자동)</strong>: 연결된 휴대폰·브라우저의 무작위 ID, 접속 토큰의 해시값, 기기가 알린 이름·플랫폼·브라우저 종류(각 80자 이내), 연결 시각과 마지막 접속 시각</li>
+        <li><strong>웹 푸시 알림 등록 정보(알림을 켠 경우)</strong>: 브라우저가 발급한 푸시 구독 주소(endpoint), PC의 암호화 신원으로만 열 수 있도록 봉인된 구독 키, 어느 PC·연결 기기와 연결되는지에 대한 ID, 서버 발송용 VAPID 키(서버 자체 키)</li>
+        <li><strong>네이티브 푸시 알림 등록 정보(모바일 앱에서 알림을 켠 경우)</strong>: APNs(iOS) 또는 FCM(Android) 기기 토큰, 플랫폼, 연결된 PC·기기 ID. 이 정보는 relay의 메모리에만 있고 파일로 저장하지 않으며, 서버를 다시 시작하면 PC가 다시 알려 줍니다.</li>
+        <li><strong>임시 정보(메모리에만 보관)</strong>: 6자리 페어링 코드와 일회용 승인 티켓(5분간 유효), 접속 시도 횟수 제한을 위한 IP 주소별 카운터, 현재 열려 있는 연결</li>
+        <li><strong>쿠키</strong>: 웹 앱에 맞는 화면 구성 버전을 내려 주기 위해 기기 ID를 담은 쿠키(<code>mixdog_device</code>, 유효기간 1년)를 설정합니다. 광고나 추적 목적으로 쓰지 않습니다.</li>
+        <li><strong>원격 연결 중 전달되는 내용</strong>: 대화, 코드, 화면 등 연결 중 오가는 내용은 PC와 휴대폰·브라우저 사이에서 종단간 암호화되어 전달되며 relay는 암호문만 전달합니다. 내용을 열람하거나 저장하지 않습니다. 알림 본문도 같은 방식으로 PC가 암호화하여 보내므로 relay와 Apple·Google은 알림 내용을 알 수 없습니다.</li>
+        <li><strong>웹훅 전달(선택 기능)</strong>: 이용자가 Mixdog의 웹훅 수신 기능을 켠 경우, 외부 서비스가 보낸 요청이 relay를 거쳐 PC로 전달됩니다. 이 내용은 저장하지 않고 PC로 그대로 넘기며, 종단간 암호화 대상은 아니고 전송 구간 암호화(HTTPS)로 보호됩니다.</li>
+      </ul>
+      <h3>나. 서비스 접속 기록</h3>
+      <p>relay 프로그램은 접속자의 IP 주소를 요청 횟수 제한 용도로 메모리에서만 쓰며 파일에 저장하지 않습니다. 접속이 거부된 경우에는 원인과 기기 ID 앞 8자리만 서버 운영 로그에 남습니다. 이 외의 접속 기록은 서버 운영 환경(네트워크·시스템 로그)이 법령에 따라 남기는 범위로 한정됩니다.</p>
+      <h3>다. 의견 보내기(선택)</h3>
+      <p>앱의 설정에서 의견 보내기를 이용하면 이용자가 직접 입력한 의견 종류(버그·제안·기타), 의견 내용(8,000자 이내), 회신받을 이메일 주소, 첨부한 이미지(PNG·JPEG·WebP, 최대 3장)만 relay로 전송됩니다. 대화·로그·기기 정보 등은 자동으로 붙지 않으며, 접속 IP 등 보낸 사람의 접속 정보는 의견과 함께 저장하지 않습니다. 의견은 메일로 전달할 때까지 relay의 전용 폴더에 임시 보관되며, support@tribgames.com으로 SMTP 메일로 전송됩니다.</p>
+      <h3>라. 이용자의 PC·휴대폰에서만 처리되는 정보</h3>
+      <p>회사에 전송되지 않고 이용자 기기에만 저장되는 정보는 ‘6. 기기에만 저장되는 정보’를 참고해 주세요.</p>
+
+      <h2>3. 처리 목적</h2>
+      <ul>
+        <li>PC와 휴대폰·브라우저 사이의 원격 연결 중계, 기기 인증과 접근 통제</li>
+        <li>알림 전달(Apple, Google, 브라우저 푸시 서비스 이용)</li>
+        <li>연결된 PC 앱 버전에 맞는 웹 앱 화면 제공</li>
+        <li>무차별 대입, 과다 요청 등 부정 이용 방지와 서비스 안정 운영</li>
+        <li>의견·문의 접수와 회신, 오류 개선</li>
+        <li>앱 업데이트 확인과 제공</li>
+      </ul>
+
+      <h2>4. 보유 및 이용 기간</h2>
+      <ul>
+        <li><strong>PC 등록 정보·연결된 기기 정보</strong>: 이용자가 앱에서 연결 해제(페어링 해제)할 때까지. 연결 해제를 하면 해당 정보와 연결된 알림 등록 정보가 즉시 삭제됩니다.</li>
+        <li><strong>웹 푸시 알림 등록 정보</strong>: 연결 해제나 알림 해제 시, 또는 푸시 서비스가 구독이 만료되었다고 알려 오면 삭제됩니다.</li>
+        <li><strong>네이티브 푸시 토큰</strong>: relay 메모리에서 연결 해제, 토큰 무효 확인, 서버 재시작 시 사라집니다.</li>
+        <li><strong>페어링 코드·티켓</strong>: 5분 후 만료되며 메모리에만 있습니다.</li>
+        <li><strong>의견</strong>: 메일 전송이 끝나기 전까지 임시 보관하며, 전송이 끝나면 내용과 첨부는 삭제되고 접수 번호·확인용 해시값·처리 시각만 남습니다(최대 5,000건, 오래된 것부터 삭제). 전송된 메일은 회사의 메일함에서 문의 처리에 필요한 기간 동안 보관한 뒤 삭제합니다.</li>
+        <li>관련 법령에 따라 보존해야 하는 정보는 해당 기간 동안 보관합니다.</li>
+      </ul>
+
+      <h2>5. 제3자 제공, 처리 위탁 및 국외 이전</h2>
+      <p>회사는 이용자의 정보를 판매하거나 광고 목적으로 제공하지 않습니다. 서비스 기능을 위해 아래 사업자가 관여하며, 이들은 미국 등 국외에서 정보를 처리할 수 있습니다. 정보는 해당 기능을 사용하는 시점에 네트워크를 통해 전송됩니다.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>받는 자</th>
+            <th>전송 항목</th>
+            <th>이용 목적</th>
+            <th>보유 기간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HostPapa, Inc.<br>(relay 서버 호스팅, 미국 로스앤젤레스)</td>
+            <td>relay가 처리·보관하는 정보(2-가 항목), IP 주소 등 접속 정보</td>
+            <td>원격 연결·알림 중계, 의견 접수를 위한 서버 운영</td>
+            <td>위 4항의 보유 기간과 같음</td>
+          </tr>
+          <tr>
+            <td>Apple Inc.<br>(APNs, TestFlight)</td>
+            <td>iOS 기기 토큰, 암호화된 알림 데이터, IP 주소 등 접속 정보</td>
+            <td>iOS 푸시 알림 전달, 베타 앱 배포</td>
+            <td>제공자 정책에 따름</td>
+          </tr>
+          <tr>
+            <td>Google LLC<br>(Firebase Cloud Messaging)</td>
+            <td>Android 기기 토큰, 암호화된 알림 데이터, IP 주소 등 접속 정보. Android 앱에 포함된 FCM 구성요소가 Google과 주고받는 기기 식별 정보</td>
+            <td>Android 푸시 알림 전달</td>
+            <td>제공자 정책에 따름</td>
+          </tr>
+          <tr>
+            <td>브라우저 푸시 서비스<br>(Google, Mozilla, Apple, Microsoft 등 이용자 브라우저의 제공사)</td>
+            <td>웹 푸시 구독 주소, 암호화된 알림 데이터, IP 주소 등 접속 정보</td>
+            <td>웹 앱 알림 전달</td>
+            <td>제공자 정책에 따름</td>
+          </tr>
+          <tr>
+            <td>GitHub, Inc.<br>(GitHub Releases)</td>
+            <td>IP 주소, 앱 버전·운영체제 등 다운로드·확인 요청에 포함되는 정보</td>
+            <td>데스크톱·Android 앱 업데이트 확인과 내려받기, 이용자가 선택한 로컬 모델 실행 파일 내려받기</td>
+            <td>제공자 정책에 따름</td>
+          </tr>
+          <tr>
+            <td>이용자가 선택한 AI 제공사<br>(예: Anthropic, OpenAI, Google, xAI, OpenRouter, DeepSeek)</td>
+            <td>이용자가 입력한 요청과 작업에 필요한 코드·파일 내용, 이용자 본인의 인증 정보</td>
+            <td>AI 응답 생성. 이용자의 PC에서 해당 제공사로 직접 전송되며 회사 서버를 거치지 않습니다.</td>
+            <td>각 제공사의 정책에 따름</td>
+          </tr>
+          <tr>
+            <td>Google LLC<br>(Google Workspace, 의견 메일 전송·수신)</td>
+            <td>의견 종류·내용·회신 이메일·첨부 이미지</td>
+            <td>의견을 support@tribgames.com으로 전달</td>
+            <td>회사의 메일함 정책에 따름</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>이용자가 쓰는 AI 제공사의 구독·API 키와 그 제공사의 개인정보 처리방침은 이용자와 해당 제공사 사이의 관계에 따릅니다. 코드 편집이나 웹 검색 등 이용자가 직접 켠 외부 연동(GitHub, 메신저 등)도 이용자가 선택한 서비스로 직접 연결됩니다.</p>
+      <p>각 업체의 개인정보 처리방침: <a href="https://www.apple.com/legal/privacy/">Apple</a> · <a href="https://policies.google.com/privacy">Google</a> · <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a></p>
+      <p>국외 이전을 원하지 않으면 해당 기능(원격 연결, 알림, 업데이트)을 쓰지 않거나 앱을 삭제할 수 있습니다. 다만 해당 기능은 이용할 수 없습니다.</p>
+
+      <h2>6. 기기에만 저장되는 정보</h2>
+      <p>아래 정보는 이용자의 기기에만 저장되며 회사 서버로 전송되지 않습니다.</p>
+      <ul>
+        <li><strong>데스크톱 앱(PC)</strong>: 대화 기록과 세션, 프로젝트 파일, 설정, AI 제공사 인증 정보(API 키·로그인 토큰), 원격 연결 인증 정보, 연결된 기기의 알림 등록 정보, 운영 로그. 인증 정보는 이용자 본인만 읽을 수 있는 권한의 파일로 저장합니다.</li>
+        <li><strong>충돌 기록</strong>: Windows 데스크톱 앱은 비정상 종료 시 PC에 충돌 기록(덤프)을 남기지만 외부로 업로드하지 않습니다. 문제 해결을 위해 이용자가 직접 보낼 때에만 회사가 받을 수 있습니다.</li>
+        <li><strong>모바일 앱</strong>: 연결한 PC 목록(접속 주소, PC ID, 이름, 마지막 사용 시각), 앱 업데이트 안내 숨김 설정, 알림 복호화용 암호 키 쌍(개인 키는 iOS 키체인 또는 Android 키스토어에서 보호되며 기기 밖으로 나가지 않음), 푸시 토큰. 카메라는 PC의 QR 코드를 읽을 때만 쓰이며 사진은 저장하거나 전송하지 않습니다.</li>
+        <li><strong>웹 앱(브라우저)</strong>: 연결 인증 정보와 설정은 브라우저 저장소에 보관됩니다.</li>
+      </ul>
+
+      <h2>7. 이용자 권리와 행사 방법</h2>
+      <ul>
+        <li>이용자는 언제든지 개인정보의 열람, 정정, 삭제, 처리 정지, 동의 철회를 요구할 수 있으며, 회사는 지체 없이 조치합니다.</li>
+        <li><strong>연결 해제(페어링 해제)</strong>: PC의 Mixdog 설정 → 연결(Connection)에서 개별 휴대폰·브라우저를 해제하거나 PC 등록 자체를 해제하면 relay에 저장된 해당 정보와 알림 등록 정보가 삭제됩니다. 모바일 앱에서는 저장된 PC를 목록에서 삭제할 수 있습니다.</li>
+        <li>휴대폰 또는 브라우저의 알림 권한을 끄면 알림 전달이 중단됩니다.</li>
+        <li>앱을 삭제하면 기기에 저장된 정보도 삭제됩니다. relay에 남은 정보는 위 연결 해제로 삭제할 수 있으며, 직접 해제하기 어려운 경우 support@tribgames.com으로 요청해 주세요.</li>
+        <li>의견으로 보낸 내용의 열람·삭제 요청도 support@tribgames.com으로 보내 주세요. 의견 접수 번호나 회신 이메일을 함께 알려 주시면 확인에 도움이 됩니다.</li>
+        <li>법정대리인이나 위임받은 대리인도 권리를 행사할 수 있습니다.</li>
+      </ul>
+
+      <h2>8. 안전성 확보 조치</h2>
+      <ul>
+        <li>원격 연결 내용 종단간 암호화(P-256 키 교환과 AES-256-GCM)와 모든 통신 구간의 TLS 암호화</li>
+        <li>기기 비밀값·접속 토큰은 해시값으로만 저장하고, 서버 비밀 키와 저장 파일은 서버 운영 계정만 읽을 수 있도록 제한</li>
+        <li>알림 내용은 PC에서 암호화하여 보내고 휴대폰에서만 복호화</li>
+        <li>페어링 코드 시도 횟수 제한, 등록·접속 요청 제한, 승인 절차(PC에서 직접 승인) 등 부정 이용 방지</li>
+        <li>필요한 최소한의 정보만 처리하고 의견 첨부는 이미지 형식·크기를 검증</li>
+      </ul>
+
+      <h2>9. 쿠키 및 유사 식별자</h2>
+      <p>웹 앱은 화면 구성 선택을 위한 쿠키(<code>mixdog_device</code>)를 사용하며, 브라우저 설정에서 삭제하거나 거부할 수 있습니다. 거부하면 일부 화면이 올바르게 표시되지 않을 수 있습니다. 광고 식별자는 사용하지 않습니다.</p>
+
+      <h2>10. 만 14세 미만 아동의 개인정보</h2>
+      <p>Mixdog은 개발자를 위한 도구로 만 14세 미만 아동을 대상으로 하지 않으며, 회사는 만 14세 미만 아동의 개인정보를 법정대리인의 동의 없이 알면서 수집하지 않습니다. 아동의 정보가 전달되었음을 알게 되면 지체 없이 삭제합니다.</p>
+
+      <h2>11. 개인정보의 파기</h2>
+      <p>보유 기간이 지나거나 처리 목적을 달성한 개인정보는 지체 없이 파기합니다. 전자 파일은 복구할 수 없는 방법으로 삭제합니다.</p>
+
+      <h2>12. 개인정보 보호 문의</h2>
+      <p>개인정보 처리와 관련한 문의, 불만, 피해 구제 요청은 아래로 연락해 주세요.</p>
+      <ul>
+        <li>이메일: <a href="mailto:support@tribgames.com">support@tribgames.com</a></li>
+      </ul>
+
+      <h2>13. 권익침해 구제 방법</h2>
+      <p>개인정보 침해에 대한 신고나 상담이 필요하면 아래 기관에 문의할 수 있습니다.</p>
+      <ul>
+        <li>개인정보분쟁조정위원회: 1833-6972 (<a href="https://www.kopico.go.kr">www.kopico.go.kr</a>)</li>
+        <li>개인정보침해신고센터: 국번 없이 118 (<a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a>)</li>
+        <li>대검찰청: 국번 없이 1301 (<a href="https://www.spo.go.kr">www.spo.go.kr</a>)</li>
+        <li>경찰청: 국번 없이 182 (<a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a>)</li>
+      </ul>
+
+      <h2>14. 처리방침의 변경</h2>
+      <p>법령이나 서비스가 바뀌어 이 처리방침을 변경하는 경우 시행 7일 전부터 공지합니다. 수집 항목이나 이용 목적, 제3자 제공 등 이용자 권리에 중대한 변경이 있으면 시행 30일 전부터 공지합니다.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <img src="../../../assets/ComLogo.png" alt="TRIBGAMES" class="footer__logo" width="600" height="117">
+        <nav class="footer__cols" aria-label="사이트 링크">
+          <div>
+            <h2 data-i18n="nav.games">게임</h2>
+            <ul>
+              <li><a href="../../../games/">Clash Tactica</a></li>
+              <li><a href="../../gamerscroll/">GamerScroll</a></li>
+              <li><a href="../../unity-tools/">UniGit · UniCell</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>AI</h2>
+            <ul>
+              <li><a href="../">Mixdog</a></li>
+              <li><a href="../../aiscroll/">AIScroll</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.company">회사</h2>
+            <ul>
+              <li><a href="../../../#company" data-i18n="nav.company">회사 소개</a></li>
+              <li><a href="../../../#history" data-i18n="nav.history">연혁</a></li>
+              <li><a href="mailto:support@tribgames.com" data-i18n="nav.contact">문의</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 data-i18n="footer.policy">정책</h2>
+            <ul>
+              <li><a href="../../../terms/" data-i18n="footer.link.terms">이용약관</a></li>
+              <li><a href="../../../privacy/" data-i18n="footer.link.privacy">개인정보 처리방침</a></li>
+              <li><a href="./">Mixdog 개인정보 처리방침</a></li>
+              <li><a href="../../../account-deletion/" data-i18n="footer.link.accountDeletion">계정 삭제 안내</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p><span>34, Suji-ro 342beon-gil, Suji-gu, Yongin-si, Gyeonggi-do A128</span><span>support@tribgames.com</span></p>
+        <p>© 2026 TRIBGAMES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../assets/language.js"></script>
+</body>
+</html>
